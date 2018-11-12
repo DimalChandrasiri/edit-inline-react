@@ -7,6 +7,7 @@ export interface EditInlineReactProps {
     minLength?: number
     maxLength?: number
     editingDisabled?: boolean
+    customClass: string
 }
 
 export interface EditInlineReactState {
@@ -23,9 +24,15 @@ class EditInlineReact extends React.Component<EditInlineReactProps, EditInlineRe
         super(props);
     }
     render() {
-        return (
-            <div className='react-inline-editor'></div>
-        )
+        const { editingDisabled, initText, customClass } = this.props;
+        
+        if (editingDisabled) {
+            return ( 
+                <span className={'edit-inline' + customClass}>{initText}</span>
+            )
+        } else { 
+            return <span>{initText}</span>
+        }
     }
 }
 

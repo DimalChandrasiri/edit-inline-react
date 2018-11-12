@@ -6,6 +6,7 @@ export interface EditInlineReactProps {
     minLength?: number;
     maxLength?: number;
     editingDisabled?: boolean;
+    customClass: string;
 }
 export interface EditInlineReactState {
 }

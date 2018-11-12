@@ -23,7 +23,13 @@ var EditInlineReact = /** @class */ (function (_super) {
         return _super.call(this, props) || this;
     }
     EditInlineReact.prototype.render = function () {
-        return (React.createElement("div", { className: 'react-inline-editor' }));
+        var _a = this.props, editingDisabled = _a.editingDisabled, initText = _a.initText, customClass = _a.customClass;
+        if (editingDisabled) {
+            return (React.createElement("span", { className: 'edit-inline' + customClass }, initText));
+        }
+        else {
+            return React.createElement("span", null, initText);
+        }
     };
     return EditInlineReact;
 }(React.Component));
