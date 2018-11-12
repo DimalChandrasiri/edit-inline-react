@@ -2,10 +2,25 @@
   "name": "edit-inline-react",
   "version": "1.0.0",
   "description": "A simple react component which will allow to edit texts inline",
-  "main": "index.js",
+  "main": "build/index.js",
   "scripts": {
+    "build": "tsc -p ./",
+    "watch": "tsc --watch -p ./",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Imesh Chandrasiri <dimal.chandrasiri@gmail.com>",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "svn",
+    "url": "https://github.com/DimalChandrasiri/edit-inline-react"
+  },
+  "dependencies": {
+    "@types/react": "^16.7.3",
+    "@types/react-dom": "^16.0.9",
+    "react": "^16.6.1",
+    "react-dom": "^16.6.1"
+  },
+  "devDependencies": {
+    "typescript": "^3.1.6"
+  }
 }
